@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2>Expanding Grid</h2>
+  <p>Click on the boxes below:</p>
+</div>
+<h2>CORPORATE RESTRUCTURING</h2>
+<!-- Two columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:green;">
+   Financial Restructuring
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:blue;">
+ Organsiational Restructuring
+  </div>
+  
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Financial Restructuring</h2>
+<p>Financial restructuring may occur to changes in the market or legal environment and are needed in order for the business to survive. . 
+For example, a corporate entity may choose to restructure their debt to take advantage of lower interest rates or to free up cash to invest in current opportunities. </p>
+  
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Organsiational Restructuring</h2>
+ 
+</div>
+
+
+
+
+
+
+
+<h2>CAPITAL RAISING</h2>
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:green;">
+   PRIVATE PLACEMENT
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:blue;">
+   EQUITY FINANCE
+
+ </div>
+  <div class="column" onclick="openTab('b3');" style="background:red;">
+   DEBT INSTRUMENT
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>PRIVATE PLACEMENT</h2>
+ <p>IN THAT WE BASICALLY WORK ON RESTRUCTURING THE CORPORTAE BY GIVING SUPPORT AND PREPARE FOR GROWTH</p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>EQUITY FINANCE</h2>
+<p>IN THAT WE BASICALLY WORK ON IPO/FPO/RIGHT ISSUE</p>
+  </div>
+
+<div id="b3" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>DEBT INSTRUMENT</h2>
+  <p>IN THAT BASICALLY WORK ON RAISING FUNDS THROUGH BONDS, DEBNTURES, COMMERCIAL PAPERS</p>
+</div>
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+</body>
+</html> 
